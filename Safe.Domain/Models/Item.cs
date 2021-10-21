@@ -12,7 +12,9 @@ namespace Safe.Domain.Models
     {
         [Key]
         public int itemId { get; set; }
+
         public string itemName { get; set; }
+
         public string itemDescription { get; set; }
 
         [Column(TypeName = "decimal(18,4)")]

@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\Safe.Domain.deps.json
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\Safe.Domain.runtimeconfig.json
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\Safe.Domain.runtimeconfig.dev.json
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\Safe.Domain.dll
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\ref\Safe.Domain.dll
+C:\Users\PC\source\repos\Safe\Safe.Domain\bin\Debug\net5.0\Safe.Domain.pdb
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.AssemblyInfo.cs
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.dll
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\ref\Safe.Domain.dll
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.pdb
+C:\Users\PC\source\repos\Safe\Safe.Domain\obj\Debug\net5.0\Safe.Domain.genruntimeconfig.cache

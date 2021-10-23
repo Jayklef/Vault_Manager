@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Safe.Domain;
 
 namespace Safe.Domain.Migrations
 {
     [DbContext(typeof(SafeContext))]
-    partial class SafeContextModelSnapshot : ModelSnapshot
+    [Migration("20211023032349_AddItemToClientTable")]
+    partial class AddItemToClientTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,9 +64,6 @@ namespace Safe.Domain.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AccountManagerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
@@ -87,8 +86,6 @@ namespace Safe.Domain.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccountManagerId");
 
                     b.ToTable("Clients");
                 });
@@ -124,15 +121,6 @@ namespace Safe.Domain.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("Safe.Domain.Models.Client", b =>
-                {
-                    b.HasOne("Safe.Domain.Models.AccountManager", "AccountManager")
-                        .WithMany("Clients")
-                        .HasForeignKey("AccountManagerId");
-
-                    b.Navigation("AccountManager");
-                });
-
             modelBuilder.Entity("Safe.Domain.Models.Item", b =>
                 {
                     b.HasOne("Safe.Domain.Models.Category", "Category")
@@ -146,11 +134,6 @@ namespace Safe.Domain.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Client");
-                });
-
-            modelBuilder.Entity("Safe.Domain.Models.AccountManager", b =>
-                {
-                    b.Navigation("Clients");
                 });
 
             modelBuilder.Entity("Safe.Domain.Models.Category", b =>

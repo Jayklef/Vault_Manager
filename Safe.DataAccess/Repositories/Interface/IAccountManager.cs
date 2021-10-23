@@ -10,7 +10,7 @@ namespace Safe.DataAccess.Repositories.Interface
     public interface IAccountManager
     {
         List<AccountManagerDto> GetAllAccountManagers();
-        AccountManagerDto GetAccountManagerById(int id);
+        AccountManagerDto GetAccountManagerById(int Id);
         void CreateAccountManager(AccountManagerDto accountManagerDto);
     }
 }

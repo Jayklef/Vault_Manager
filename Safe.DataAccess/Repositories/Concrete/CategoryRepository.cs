@@ -22,21 +22,21 @@ namespace Safe.DataAccess.Repositories.Concrete
         {
             var categories = _context.Categories.Select(c => new CategoryDto
             {
-                id = c.id,
-                categoryName = c.categoryName,
-                amountPerMonth = c.amountPerMonth
+                Id = c.Id,
+                CategoryName = c.CategoryName,
+                AmountPerMonth = c.AmountPerMonth
             }).ToList();
 
             return categories;
         }
 
-        public CategoryDto GetCategoryById(int id)
+        public CategoryDto GetCategoryById(int Id)
         {
-            var category = _context.Categories.Where(c => c.id == id).Select(c => new CategoryDto
+            var category = _context.Categories.Where(c => c.Id == Id).Select(c => new CategoryDto
             {
-                id = c.id,
-                categoryName = c.categoryName,
-                amountPerMonth = c.amountPerMonth
+                Id = c.Id,
+                CategoryName = c.CategoryName,
+                AmountPerMonth = c.AmountPerMonth
             }).FirstOrDefault();
 
             return category;
@@ -46,8 +46,8 @@ namespace Safe.DataAccess.Repositories.Concrete
         {
             var category = new CategoryDto
             {
-                categoryName = categoryDto.categoryName,
-                amountPerMonth = categoryDto.amountPerMonth
+                CategoryName = categoryDto.CategoryName,
+                AmountPerMonth = categoryDto.AmountPerMonth
             };
 
             _context.Add(category);

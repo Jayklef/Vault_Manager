@@ -105,11 +105,11 @@ namespace Safe.Controllers
         }
 
         [HttpDelete("DeleteItem")]
-        public IActionResult DeleteItem(int itemId)
+        public IActionResult DeleteItem(int ItemId)
         {
             try
             {
-                _IItemRepository.DeleteItem(itemId);
+                _IItemRepository.DeleteItem(ItemId);
                 return Ok();
             }
             catch (Exception ex)

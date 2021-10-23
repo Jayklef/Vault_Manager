@@ -10,7 +10,7 @@ namespace Safe.DataAccess.Repositories.Interface
     public interface ICategoryRepository
     {
         List<CategoryDto> GetAllCategories();
-        CategoryDto GetCategoryById(int id);
+        CategoryDto GetCategoryById(int Id);
         void CreateCategory(CategoryDto categoryDto);
     }
 }

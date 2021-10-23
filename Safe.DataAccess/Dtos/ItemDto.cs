@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Safe.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ namespace Safe.DataAccess.Dtos
 {
     public class ItemDto
     {
-        public int itemId { get; set; }
-        public string itemName { get; set; }
-        public string itemDescription { get; set; }
-        public decimal currentValue { get; set; }
+        public int ItemId { get; set; }
+        public string ItemName { get; set; }
+        public string ItemDescription { get; set; }
+        public decimal CurrentValue { get; set; }
+        public Category Category { get; set; }
+        public Client Client { get; set; }
     }
 }

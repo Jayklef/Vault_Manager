@@ -10,11 +10,14 @@ namespace Safe.Domain.Models
 {
     public class Category
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        public string categoryName { get; set; }
+        public string CategoryName { get; set; }
 
         [Column(TypeName = "decimal(18,4)")]
-        public decimal amountPerMonth { get; set; }
+        public decimal AmountPerMonth { get; set; }
+
+        public IEnumerable<Item> Items { get; set; }
+
     }
 }

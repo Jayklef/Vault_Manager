@@ -10,8 +10,9 @@ namespace Safe.Domain.Models
     public class AccountManager
     {
         [Key]
-        public int id { get; set; }
-        public string name { get; set; }
-        public string staffNumber { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string StaffNumber { get; set; }
+        public IEnumerable<Client> Clients { get; set; }
     }
 }

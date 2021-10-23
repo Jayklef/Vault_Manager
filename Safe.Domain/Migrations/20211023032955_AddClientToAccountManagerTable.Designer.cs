@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Safe.Domain;
 
 namespace Safe.Domain.Migrations
 {
     [DbContext(typeof(SafeContext))]
-    partial class SafeContextModelSnapshot : ModelSnapshot
+    [Migration("20211023032955_AddClientToAccountManagerTable")]
+    partial class AddClientToAccountManagerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

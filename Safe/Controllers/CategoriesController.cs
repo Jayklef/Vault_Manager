@@ -42,11 +42,11 @@ namespace Safe.Controllers
         }
 
         [HttpGet("GetCategoryById")]
-        public IActionResult GetCategoryById(int id)
+        public IActionResult GetCategoryById(int Id)
         {
             try
             {
-                var category = _ICategoryRepository.GetCategoryById(id);
+                var category = _ICategoryRepository.GetCategoryById(Id);
                 return Ok(category);
             }
             catch (Exception ex)

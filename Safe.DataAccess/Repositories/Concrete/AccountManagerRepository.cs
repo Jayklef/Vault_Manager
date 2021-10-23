@@ -23,21 +23,21 @@ namespace Safe.DataAccess.Repositories.Concrete
         {
             var accountManagers = _context.AccountManagers.Select(a => new AccountManagerDto
             {
-                id = a.id,
-                name = a.name,
-                staffNumber = a.staffNumber
+                Id = a.Id,
+                Name = a.Name,
+                StaffNumber = a.StaffNumber
             }).ToList();
 
             return accountManagers;
         }
 
-        public AccountManagerDto GetAccountManagerById(int id)
+        public AccountManagerDto GetAccountManagerById(int Id)
         {
-            var accountManager = _context.AccountManagers.Where(a => a.id == id).Select(a => new AccountManagerDto
+            var accountManager = _context.AccountManagers.Where(a => a.Id == Id).Select(a => new AccountManagerDto
             {
-                id = a.id,
-                name = a.name,
-                staffNumber = a.staffNumber
+                Id = a.Id,
+                Name = a.Name,
+                StaffNumber = a.StaffNumber
             }).FirstOrDefault();
 
             return accountManager;
@@ -46,8 +46,8 @@ namespace Safe.DataAccess.Repositories.Concrete
         {
             var accountManager = new AccountManager
             {
-                name = accountManagerDto.name,
-                staffNumber = accountManagerDto.staffNumber
+                Name = accountManagerDto.Name,
+                StaffNumber = accountManagerDto.StaffNumber
             };
 
             _context.Add(accountManager);

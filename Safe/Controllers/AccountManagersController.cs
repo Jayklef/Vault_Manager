@@ -43,11 +43,11 @@ namespace Safe.Controllers
         }
 
         [HttpGet("GetAccountManagerById")]
-        public IActionResult GetAccountManagerById(int id)
+        public IActionResult GetAccountManagerById(int Id)
         {
             try
             {
-                var accountManager = _IAccountManagerRepository.GetAccountManagerById(id);
+                var accountManager = _IAccountManagerRepository.GetAccountManagerById(Id);
                 return Ok(accountManager);
             }
             catch (Exception ex)

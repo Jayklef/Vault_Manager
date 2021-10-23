@@ -11,6 +11,8 @@ namespace Safe.DataAccess.Repositories.Interface
     {
         List<ItemDto> GetAllItems();
         ItemDto GetItemById(int Id);
+
+       // ItemDto GetItemByCategory(int Id);
         void CreateItem(ItemDto itemDto);
         void UpdateItem(ItemDto itemDto);
         void DeleteItem(int Id);

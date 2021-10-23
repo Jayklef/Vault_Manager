@@ -18,5 +18,7 @@ namespace Safe.Domain.Models
         public string Profession { get; set; }
         public DateTime Birthdate { get; set; }
         public string PhoneNumber { get; set; }
+        public IEnumerable<Item> Items { get; set; }
+        public AccountManager AccountManager { get; set; }
     }
 }

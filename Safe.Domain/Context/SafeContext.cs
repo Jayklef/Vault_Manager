@@ -18,5 +18,6 @@ namespace Safe.Domain
         public DbSet<Item> Items { get; set; }
         public DbSet<AccountManager> AccountManagers { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ErrorLog> ErrorLogs { get; set; }
     }
 }

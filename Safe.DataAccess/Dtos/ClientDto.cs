@@ -10,6 +10,7 @@ namespace Safe.DataAccess.Dtos
     public class ClientDto
     {
         public int Id { get; set; }
+        public string RequestId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }

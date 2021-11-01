@@ -14,10 +14,12 @@ namespace Safe.Controllers
     public class ClientsController : ControllerBase
     {
         private readonly IClientRepository _IClientRepository;
+        private readonly IErrorLogRepository _IErrorLogRepository;
 
-        public ClientsController(IClientRepository iClientRepository)
+        public ClientsController(IClientRepository iClientRepository, IErrorLogRepository iErrorLogRepository)
         {
             _IClientRepository = iClientRepository;
+            _IErrorLogRepository = iErrorLogRepository;
         }
 
         [HttpGet("GetAllClients")]
@@ -50,14 +52,14 @@ namespace Safe.Controllers
             }
             catch (Exception ex)
             {
-                var errorResponnse = new ErrorResponseDto
+                var errorResponse = new ErrorResponseDto
                 {
                     ResponseCode = "01",
                     ResponseMessage = ex.Message == null ? null : ex.Message.ToString(),
                     StackTrace = ex.StackTrace
                 };
 
-                return BadRequest(errorResponnse);
+                return BadRequest(errorResponse);
             }
         }
 
@@ -71,6 +73,14 @@ namespace Safe.Controllers
             }
             catch (Exception ex)
             {
+                var errorLogDto = new ErrorLogDto
+                {
+                    RequestId = clientDto.RequestId,
+                    ErrorMessage = ex.Message == null ? null : ex.Message.ToString(),
+                    StackTrace = ex.StackTrace,
+                    InnerException = ex.InnerException.ToString()
+                };
+
                 var errorResponse = new ErrorResponseDto
                 {
                     ResponseCode = "01",

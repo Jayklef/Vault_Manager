@@ -11,6 +11,7 @@ namespace Safe.Domain.Models
     {
         [Key]
         public int Id { get; set; }
+        public string RequestId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }

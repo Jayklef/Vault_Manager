@@ -57,6 +57,7 @@ namespace Safe.DataAccess.Repositories.Concrete
         {
             var client = new Client
             {
+                RequestId = clientDto.RequestId,
                 FirstName = clientDto.FirstName,
                 LastName = clientDto.LastName,
                 Address = clientDto.Address,
